@@ -1,0 +1,137 @@
+/* Overall page layout */
+.assignment-page {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+/* Content area */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f5f5f5;
+    overflow-y: auto;
+    color: black;
+}
+
+/* Header */
+.upload-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.upload-header h3 {
+    margin: 0;
+    color: #707f90;
+    font-size: 24px;
+}
+
+/* Form */
+.upload-form {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
+}
+
+.form-group textarea {
+    min-height: 80px;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Assignments List */
+.assignments-list {
+    margin-top: 30px;
+}
+
+.assignments-list h3 {
+    color: #707f90;
+}
+
+.assignments-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.assignment-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.assignment-item .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+.delete-button {
+    background-color: #e60000;
+}
+
+.delete-button:hover {
+    background-color: #b30000;
+}

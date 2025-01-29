@@ -1,0 +1,11 @@
+my-react-app/
+  ├── node_modules/       # Installed dependencies
+  ├── public/             # Static files (e.g., index.html)
+  ├── src/                # React components and code
+  │   ├── App.css         # App-specific styles
+  │   ├── App.js          # Main App component
+  │   ├── index.css       # Global styles
+  │   ├── index.js        # Entry point for React
+  ├── .gitignore          # Git ignore file
+  ├── package.json        # Project metadata and dependencies
+  ├── README.md           # Project documentation

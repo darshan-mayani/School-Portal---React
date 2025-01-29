@@ -1,0 +1,127 @@
+/* Sidebar styles */
+/* Sidebar styles */
+.sidebar {
+    height: 100%;
+    /* Full height */
+    background-color: #2f3b52;
+    /* Sidebar background */
+    color: #fff;
+    display: flex;
+    /* To make the sidebar items align vertically */
+    flex-direction: column;
+    transition: width 0.3s ease;
+    /* Smooth transition for sidebar open/close */
+    z-index: 100;
+    /* Ensures sidebar stays above content */
+    box-sizing: border-box;
+    /* Prevent padding from affecting width */
+    flex-shrink: 0;
+    /* Prevent sidebar from shrinking */
+}
+
+.sidebar.open {
+    width: 250px;
+    /* Sidebar width when open */
+}
+
+.sidebar.closed {
+    width: 60px;
+    /* Sidebar width when closed */
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #1e2a38;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar-header .toggle-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sidebar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.sidebar-menu li {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Increased gap for better spacing */
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: padding 0.3s ease;
+}
+
+.sidebar-menu li .icon {
+    font-size: 18px;
+}
+
+.sidebar.closed .menu-text {
+    display: none;
+}
+
+.sidebar-menu li a:hover {
+    background-color: #3f4c63;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+        /* Stack Sidebar above Content on smaller screens */
+    }
+
+    .sidebar {
+        position: relative;
+        /* Sidebar should be in the flow of the document */
+        width: 100%;
+        /* Make sidebar take full width on mobile */
+        height: auto;
+        /* Sidebar height adjusts based on content */
+    }
+
+    .sidebar.open,
+    .sidebar.closed {
+        width: 100%;
+        /* Sidebar takes full width on mobile */
+    }
+
+    .sidebar-header h2 {
+        text-align: center;
+        /* Center align the header on smaller screens */
+    }
+
+    .sidebar-menu li {
+        justify-content: center;
+        /* Center align the menu items */
+    }
+}

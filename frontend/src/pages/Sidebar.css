@@ -1,0 +1,134 @@
+/* Sidebar styles */
+.sidebar {
+    height: 100%;
+    background-color: #2f3b52;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+    z-index: 100;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    overflow: hidden;
+    /* Prevent overflow by default */
+}
+
+.sidebar.open {
+    width: 250px;
+    /* Sidebar width when open */
+}
+
+.sidebar.closed {
+    width: 60px;
+    /* Sidebar width when closed */
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #1e2a38;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar-header .toggle-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sidebar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    overflow-y: auto;
+    /* Make the sidebar scrollable */
+    scrollbar-width: thin;
+    /* For modern browsers */
+    scrollbar-color: #555 #2f3b52;
+    /* Scrollbar color for modern browsers */
+}
+
+.sidebar-menu::-webkit-scrollbar {
+    width: 8px;
+    /* Scrollbar width */
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+    background-color: #555;
+    /* Scrollbar thumb color */
+    border-radius: 4px;
+    /* Rounded scrollbar thumb */
+}
+
+.sidebar-menu::-webkit-scrollbar-track {
+    background-color: #2f3b52;
+    /* Scrollbar track color */
+}
+
+.sidebar-menu li {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.sidebar-menu li .icon {
+    font-size: 18px;
+}
+
+.sidebar.closed .menu-text {
+    display: none;
+}
+
+.sidebar-menu li a:hover {
+    background-color: #3f4c63;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .sidebar.open,
+    .sidebar.closed {
+        width: 100%;
+    }
+
+    .sidebar-header h2 {
+        text-align: center;
+    }
+
+    .sidebar-menu li {
+        justify-content: center;
+    }
+}
